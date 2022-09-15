@@ -2,4 +2,7 @@
 /node_modules/
 /server/node_modules/
 /server/build
+/web/node_modules/
+/web/build
+/mobile/node_modules/
 .idea
