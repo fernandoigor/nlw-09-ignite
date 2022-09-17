@@ -2,16 +2,21 @@ import { useEffect, useState } from "react";
 import * as Dialog from '@radix-ui/react-dialog';
 import { CreateAdBanner } from "./components/CreateAdBanner";
 import { GameController } from "phosphor-react";
+
 import { GameBanner } from "./components/GameBanner";
-
-
 import { Input } from "./components/Form/Input";
 
-
-
 import './styles/main.css';
-
 import logoImg from './assets/logo-nlw-esports.svg';
+
+interface Game {
+  id: string;
+  title: string;
+  bannerUrl: string;
+  _count: {
+    ads: number;
+  }
+}
 
 function App() {
   const [games, setGames] = useState<Game[]>([]);
