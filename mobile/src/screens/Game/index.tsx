@@ -3,6 +3,7 @@ import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { Entypo } from '@expo/vector-icons';
+import { SvgUri } from "react-native-svg";
 
 import { GameParams } from "../../@types/navigation";
 
@@ -51,15 +52,17 @@ export function Game() {
           <View style={styles.right} />
         </View>
 
-        <Image
-          source={{ uri: game.bannerUrl }}
-          style={styles.cover}
-          resizeMode="cover"
+
+        <SvgUri
+          width={180}
+          height={180}
+          uri={game.bannerUrl}
+          style={{alignSelf:'center', marginTop:20}}
         />
 
         <Heading
           title={game.title}
-          subtitle="Conecte-se e comece a jogar!"
+          subtitle="Conecte-se e comece a codar!"
         />
 
         <FlatList
@@ -77,7 +80,7 @@ export function Game() {
           showsHorizontalScrollIndicator
           ListEmptyComponent={
             <Text style={styles.emptyListText}>
-              Não há anúncios publicados ainda.
+              Não há devs nessa tecnologia.
             </Text>
           }
         />

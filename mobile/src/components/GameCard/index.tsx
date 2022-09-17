@@ -1,5 +1,6 @@
 import { TouchableOpacity, TouchableOpacityProps, ImageBackground, ImageSourcePropType, Text } from 'react-native';
 import { LinearGradient } from "expo-linear-gradient";
+import { SvgUri } from "react-native-svg";
 
 import { styles } from './styles';
 import { THEME } from "../../theme";
@@ -23,7 +24,14 @@ export function GameCard({ data, ...rest }: Props) {
       <ImageBackground
         style={styles.cover}
         source={{ uri: data.bannerUrl }}
+        // source={}
       >
+        <SvgUri
+          width={160}
+          height={160}
+          uri={data.bannerUrl}
+          style={{alignSelf:'center'}}
+        />
         <LinearGradient
           colors={THEME.COLORS.FOOTER}
           style={styles.footer}
@@ -33,7 +41,7 @@ export function GameCard({ data, ...rest }: Props) {
           </Text>
 
           <Text style={styles.ads}>
-            {data._count.ads} anúncios
+            {data._count.ads} {(data._count.ads == 1) ?  "Dev" : "Devs"}
           </Text>
         </LinearGradient>
       </ImageBackground>
