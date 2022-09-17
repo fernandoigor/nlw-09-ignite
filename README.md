@@ -15,7 +15,7 @@
 
 
 ### Mobile
-![](https://github.com/fernandoigor/nlw-09-ignite/blob/main/assets/simulador.gif?raw=true)
+<img src="https://github.com/fernandoigor/nlw-09-ignite/blob/main/assets/simulador.gif?raw=true" width="50%">
 
 # Web
 
